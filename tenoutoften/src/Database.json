@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "element2562",
+            "password": "jacob1"
+        }
+    ],
+    "games": [
+        {
+            "name": "God of War",
+            "thumbnail": "picture.jpg",
+            "summary": "ya ya ya I am Lorde"
+        }
+    ]
+}

@@ -9,21 +9,18 @@ return(
 <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
-      <Link to="/library">My Library</Link>
+        
+      <Link to="/">My Library</Link>
     </Navbar.Brand>
   </Navbar.Header>
   <Nav>
-    <NavItem>
-    <Link to="#">
+    <NavItem href="/addgames">
       Add Games
-    </Link>
     </NavItem>
-    <NavItem>
-    <Link to="#">
+    <NavItem href="#">
       Logout
-    </Link>
     </NavItem>
-  </Nav>
+</Nav>
 </Navbar>
 )
 }

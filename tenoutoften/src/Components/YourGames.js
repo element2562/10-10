@@ -2,6 +2,8 @@ import React from "react";
 import { Image } from "react-bootstrap";
 
 export default props => {
+    console.log(props.games);
+    
     return(
         <React.Fragment>
         <h3>{props.games.name}</h3>

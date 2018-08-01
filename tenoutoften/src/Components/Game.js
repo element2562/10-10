@@ -29,7 +29,6 @@ export default props => {
                 <Button id={props.index} onClick={e => {
                     api.addGameToLibrary(props.results[e.target.id].name, props.results[e.target.id].cover.url, props.results[e.target.id].summary)
                     }}>
-                
                 Add</Button>
                 </ListGroupItem>
                 </ListGroup>

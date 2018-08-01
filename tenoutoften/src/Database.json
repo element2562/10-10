@@ -9,29 +9,10 @@
   "games": [
     {
       "userId": 1,
-      "id": 1,
-      "name": "God of War",
-      "picture": "picture.jpg",
-      "summary": "ya ya ya I am Lorde"
-    },
-    {
-      "userId": 1,
       "name": "God of War",
       "picture": "//images.igdb.com/igdb/image/upload/t_thumb/cintjlnx6o8qyqtcnajl.jpg",
       "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
       "id": 2
-    },
-    {
-      "userId": "God of War II",
-      "name": "//images.igdb.com/igdb/image/upload/t_thumb/f3mwxy3opbrbmcyguhly.jpg",
-      "picture": "Kratos is now the God of War, having defeated the Olympian god Ares. Shunned by the other gods and still haunted by nightmares from his past, Kratos decides to join an army of Spartans in an attack on the city of Rhodes. Kratos also ignores a warning from the goddess Athena that his lust for revenge is alienating the other gods.",
-      "id": 3
-    },
-    {
-      "userId": "God of War III",
-      "name": "//images.igdb.com/igdb/image/upload/t_thumb/nlrzpqxz31ca31gzqvkd.jpg",
-      "picture": "Set in the realm of brutal Greek mythology, God of War III is a single-player game that allows players to take on the climatic role of the ex-Spartan warrior, Kratos, as he scales through the intimidating heights of Mt. Olympus and the dark depths of Hell to seek revenge on those who have betrayed him. Armed with double-chained blades, and an array of new weapons and magic for this iteration of the trilogy, Kratos must take on mythology's darkest creatures while solving intricate puzzles throughout his merciless quest to destroy Olympus. Utilizing a new game engine built from the ground up and state-of-the-art visual technologies, the development team behind God of War III has made standard-setting strides in giving players the realistic feel of actually being on the battlegrounds. With texture resolutions quadrupling since God of War II on PlayStation 2 computer entertainment system, God of War III, in its debut on the PS3 system, will feature fluid, life-like characters, as well as dynamic lighting effects, a robust weapon system, and world-changing scenarios that will truly bring unmistakable realism to Kratos' fateful quest. Players will have a chance to join battles on a grand scale that is four times larger than its predecessor.",
-      "id": 4
     }
   ]
 }

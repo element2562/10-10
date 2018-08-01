@@ -27,7 +27,7 @@ export default props => {
                 <p><strong>Rating: </strong>{roundedRating}</p>
                 <p><strong>Summary: </strong>{props.games.summary}</p>
                 <Button id={props.index} onClick={e => {
-                    api.addGameToLibrary(props.results[e.target.id].name, props.results[e.target.id].cover.url, props.results[e.target.id].summary)
+                    api.addGameToLibrary(sessionStorage.getItem("User"), props.results[e.target.id].name, props.results[e.target.id].cover.url, props.results[e.target.id].summary)
                     }}>
                 Add</Button>
                 </ListGroupItem>

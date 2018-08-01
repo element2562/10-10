@@ -27,6 +27,32 @@ const Api = Object.create({}, {
             })
             .then(e => e.json);
         }
+    },
+    addNewUser: {
+        value: (username, password) => {
+            return fetch("http://localhost:5002/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8"
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            })
+        }
+    },
+    getUsers: {
+        value: (username) => {
+            return fetch(`http://localhost:5002/users?username=${username}`)
+            .then(e => e.json())
+        }
+    },
+    getGames: {
+        value: () => {
+            return fetch("http://localhost:5002/users?_embed=games")
+            .then(e => e.json())
+        }
     }
 })
 export default Api;

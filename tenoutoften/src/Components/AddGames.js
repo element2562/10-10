@@ -15,19 +15,18 @@ export default class extends Component {
         return(
             <React.Fragment>
             <Form>
-                    <FormControl id="gameSearch" placeholder="Any game" onChange={e => {
+                    <FormControl id="gameSearch" placeholder="Search for a game!" onChange={e => {
                         this.searchForGames(e.target.value)
                         .then(response => {
                             this.setState({
                                 results: response
                             })
                         })
-                    }
-                        } />
-                    <Button onClick={this.searchForGames}>Search</Button>
+                    }} />
             </Form>
             <div>
                 {this.state.results.map((game, index) => (
+                    
                     <Game key={game.id} games={game} index={index} results={this.state.results} />
                 ))}
             </div>

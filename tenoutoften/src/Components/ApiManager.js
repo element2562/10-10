@@ -12,7 +12,7 @@ const Api = Object.create({}, {
         }
     },
     addGameToLibrary: {
-        value: (userId, name, picture, summary) => {
+        value: (userId, name, picture, summary, rating) => {
             return fetch("http://localhost:5002/games", {
                 method: "POST",
                 headers: {
@@ -22,7 +22,8 @@ const Api = Object.create({}, {
                     userId: userId,
                     name: name,
                     picture: picture,
-                    summary: summary
+                    summary: summary,
+                    rating: rating
                 })
             })
             .then(e => e.json);
@@ -40,6 +41,7 @@ const Api = Object.create({}, {
                     password: password
                 })
             })
+            .then(e => e.json())
         }
     },
     getUsers: {
@@ -49,8 +51,30 @@ const Api = Object.create({}, {
         }
     },
     getGames: {
-        value: () => {
-            return fetch("http://localhost:5002/users?_embed=games")
+        value: (user) => {
+            return fetch(`http://localhost:5002/users/${user}/games`)
+            .then(e => e.json())
+        }
+    },
+    deleteGame: {
+        value: (id) => {
+            return fetch(`http://localhost:5002/games/${id}`, {
+                method: "DELETE"
+            })
+        }
+    },
+    addRating: {
+        value: (id, rating, comment) => {
+            return fetch(`http://localhost:5002/games/${id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8"
+                },
+                body: JSON.stringify({
+                    rating: rating,
+                    comment: comment
+                })
+            })
             .then(e => e.json())
         }
     }

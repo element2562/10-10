@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 
 export default class extends Component {
 render(){
+  let username = sessionStorage.getItem("Username");
 return(
+  <React.Fragment>
 <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
@@ -17,11 +19,18 @@ return(
     <NavItem href="/addgames">
       Add Games
     </NavItem>
-    <NavItem href="#">
+<NavDropdown title={username} id="user-dropdown">
+<MenuItem id="userDrop" onClick={() => {
+      sessionStorage.removeItem("User")
+      window.location.reload();
+    }}>
       Logout
-    </NavItem>
+    </MenuItem>
+</NavDropdown>
 </Nav>
 </Navbar>
+
+</React.Fragment>
 )
 }
 }

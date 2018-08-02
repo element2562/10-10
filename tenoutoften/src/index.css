@@ -3,7 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-/* .placehold {
-  height: 610;
-  width: 438;
-} */
+#PageHeader {
+  text-align: center;
+}
+#subtextHeader {
+  text-align: center;
+}
+#loginForm {
+  margin: 0 auto;
+  text-align: center;
+}

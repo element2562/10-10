@@ -9,7 +9,6 @@ export default class extends Component {
     searchForGames = (e) => {
         return Api.getFromExternalApi(e)
         .then(e => e.json())
-
     }
     render(){
         return(

@@ -6,11 +6,10 @@ export default class extends Component {
     state = {
         library: [],
         show: false,
-        rating: "",
-        comment: ""
+        ratingShow: false
     }
     getRating = (rating) => {
-        this.setState({rating: rating});
+        this.setState({yourRating: rating});
     }
     getComment = (comment) => {
         this.setState({comment: comment});
@@ -20,6 +19,9 @@ export default class extends Component {
         .then(games => {
             this.setState({library: games})
         })
+    }
+    showRating = () => {
+        this.setState({ratingShow: true});
     }
     handleRating = () => {
         this.setState({show: true})
@@ -47,7 +49,10 @@ export default class extends Component {
                         getRating={this.getRating}
                         getComment={this.getComment}
                         show={this.state.show}
-                        rating={this.state.rating}
+                        yourRating={this.state.yourRating}
+                        comment={this.state.comment}
+                        showRating={this.showRating}
+                        seeRating={this.state.showRating}
                         />
                 )
             )

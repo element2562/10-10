@@ -68,14 +68,15 @@ const Api = Object.create({}, {
             return fetch(`http://localhost:5002/games/${id}`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "application/json; charset=utf-8"
+                    "Content-Type": "application/json; charset=utf-8",
+                    "Access-Control-Allow-Methods": "GET, PUT, POST, PATCH, OPTIONS"
                 },
                 body: JSON.stringify({
-                    rating: rating,
+                    yourRating: rating,
                     comment: comment
                 })
             })
-            .then(e => e.json())
+            // .then(e => e.json())
         }
     }
 })

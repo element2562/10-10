@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, InputGroup, Button, Modal, ModalDialog, ModalTitle, ModalHeader, ModalFooter, PageHeader } from "react-bootstrap";
+import { Form, FormGroup, InputGroup, FormControl, ControlLabel, Button, Modal, ModalDialog, ModalTitle, ModalHeader, ModalFooter, PageHeader } from "react-bootstrap";
 import Api from "./ApiManager";
 export default class extends Component {
     state = {
@@ -68,18 +68,20 @@ export default class extends Component {
             </Modal>
             </div>
             <div>
-            <Form id="loginForm">
-                <label>Username</label>
-                <input type="text" id="username" onChange={e => {
+            <FormGroup>
+            <Form>
+                <ControlLabel>Username</ControlLabel>
+                <FormControl type="text" id="username" onChange={e => {
                     this.setState({username: e.target.value});    
                 }} /> <br />
-                <label>Password</label>
-                <input type="password" id="password" onChange={e => {
+                <ControlLabel>Password</ControlLabel>
+                <FormControl type="password" id="password" onChange={e => {
                     this.setState({password: e.target.value});
                 }} /> <br />
                 <Button onClick={this.loginCheck}>Login</Button>
                 <Button onClick={this.handleShow}>Register</Button>
             </Form>
+            </FormGroup>
             </div>
             </div>
         )

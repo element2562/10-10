@@ -9,29 +9,24 @@
       "username": "testing",
       "password": "jackbob",
       "id": 2
+    },
+    {
+      "username": "ben_henderson",
+      "password": "durango",
+      "id": 3
+    },
+    {
+      "username": "jacobyo",
+      "password": "jacob123",
+      "id": 4
+    },
+    {
+      "username": "marlee",
+      "password": "marlee",
+      "id": 5
     }
   ],
   "games": [
-    {
-      "userId": "1",
-      "name": "God of War",
-      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/cintjlnx6o8qyqtcnajl.jpg",
-      "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
-      "rating": "97/100",
-      "id": 1,
-      "comment": "This is the best game I've ever played",
-      "yourRating": "100"
-    },
-    {
-      "userId": "1",
-      "name": "Uncharted 4: A Thief's End",
-      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/zvkdiv2dze8tcit6bzza.jpg",
-      "summary": "Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he's willing to sacrifice to save the ones he loves.",
-      "rating": "93/100",
-      "id": 2,
-      "yourRating": "99",
-      "comment": "Amazing game. Much recommend"
-    },
     {
       "userId": "2",
       "name": "Getting Over It with Bennett Foddy",
@@ -41,6 +36,63 @@
       "id": 3,
       "yourRating": "99",
       "comment": "it wuz ok"
+    },
+    {
+      "userId": "4",
+      "name": "Fortnite",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/lcy8csmxbak1hnx9kwqg.jpg",
+      "summary": "Fortnite is the living, action building game from the developer formerly known as Epic MegaGames. You and your friends will lead a group of Heroes to reclaim and rebuild a homeland that has been left empty by mysterious darkness only known as \"the Storm\". \n \nBand together online to build extravagant forts, find or build insane weapons and traps and protect your towns from the strange monsters that emerge during the Storm. In an action experience from the only company smart enough to attach chainsaws to guns, get out there to push back the Storm and save the world. And don't forget to loot all the things.",
+      "rating": "79/100",
+      "id": 6,
+      "yourRating": "85",
+      "comment": "Great game, but developers focus mainly on adding new content rather than fixing what they have."
+    },
+    {
+      "id": 19560,
+      "userId": "1",
+      "name": "God of War",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/cintjlnx6o8qyqtcnajl.jpg",
+      "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
+      "rating": "97/100",
+      "yourRating": "99",
+      "comment": "Not quite the best game ever HOMESSSS"
+    },
+    {
+      "id": 7352,
+      "userId": "5",
+      "name": "ABZÛ",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/mvplc0engxcuxnbi5zef.jpg",
+      "summary": "ABZÛ is an exploration game where you are a lone diver in a lush ocean world. The diver descends deeper and deeper into the depths, where she will encounter majestic creatures, discover ancient secrets, and search for her true purpose. ABZÛ roughly translates to \"The Ocean of Wisdom\" from ancient Sumerian.",
+      "rating": "80/100",
+      "yourRating": "85",
+      "comment": "It's a good game, just glitchy. It teaches you about fish. Wickedddd coooool"
+    },
+    {
+      "id": 94253,
+      "userId": "5",
+      "name": "Paws",
+      "picture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEXp7vG6vsHs8fS3u77Cxsnn7O/d4uXFyczN0dTKztHS19rk6ezi5+rX3N+9wcS1ubzIzxKwAAACWElEQVR4nO3b4XKiMBRAYUkUhQT6/m+7CK2GABJjdrl3e75/djo0p2FIGOF0AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAczpRxdMa2rrkW0LQnmY2mtrYqwtpWYqLpvsr0jY0SEy+FJvA7sT66Z8E0JQOr6ixuEs00sKaAaRKPDloYT1LblVgrvBV5ml4KDuu/Lyz5zyroFxYOe6/M/ZeOQtNdrbV9e8loVFHo+mn9t8PV9cNDiTEbln/ubzL2XxoKw83J19tDlV9obrMtav/uJCoonO/B3x6r/MI6KrxtTaK57B1KkmBYXXQf1WwUDrcjq4nyC+u0QtMMv7eWKL/QR2fp+noxBq4myi9MutJ8B64lKihMWC0egSuJ8gsTVvwgcJmooXBv1zYLXCRqKNzZeUeBcaKKwvvdU7V197QIjBJ1FL64A14JnCdqKdyyGjhLVF64ERgm6i7cDAwSVRe+CHwmKiv0PvjwMvCRqKvQWeseH3YCfxJVFbr7D38SdwOrym0f6nCrw3LBuFMCpy2eokIXTk1CoLpC9xy5SwrUVujCsbuUQGWFbj72hD5lhW6vRnthVqCmwrxARYWZgXoKcwPVFGYHqimMv7egkEIhKKSQwuOFhedsXXQoScJhffgagoJCOYcqicJ3yCychtWWeM57fFrF+v0/+W+Zfrzc519Gn8bFRt6z+tEDGB+7invfYv4AxseCbzvk8AUnMefR4r/PuLMtpPcSAwfGt7cC2lpo312JxULyK6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Gv8AbboIxLMxQycAAAAAElFTkSuQmCC",
+      "rating": "No rating available"
+    },
+    {
+      "id": 121,
+      "userId": "5",
+      "name": "Minecraft",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/ew1zwceoeho7lipjxi1n.jpg",
+      "summary": "Minecraft is an open world game that has no specific goals for the player to accomplish, allowing players a large amount of freedom in choosing how to play the game however, there is an achievement system. The gameplay by default is first person, but players have the option to play in third person mode. The core gameplay revolves around breaking and placing blocks. The game world is essentially composed of rough 3D objects—mainly cubes—that are arranged in a fixed grid pattern and represent different materials, such as dirt, stone, various ores, water, and tree trunks. While players can move freely across the world, objects and items can only be placed at fixed locations relative to the grid. Players can gather these material blocks and place them elsewhere, thus allowing for various constructions.",
+      "rating": "81/100",
+      "yourRating": "88",
+      "comment": "I enjoy the game. AHHHHHHHHH CREEPER"
+    },
+    {
+      "id": 3212,
+      "userId": "5",
+      "name": "The Sims 4",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/ipprn0qv5n0bztlzp8em.jpg",
+      "summary": "The Sims 4 is the highly anticipated life simulation game that lets you play with life like never before. Create new Sims with intelligence and emotion. Experience all new intuitive and fun creative tools to sculpt your Sims and build unique homes. Control the mind, body, and heart of your Sims, and bring your stories to life.",
+      "rating": "78/100",
+      "yourRating": "90",
+      "comment": "I really enjoy this game. It's very funny because of all the glitches you can do. A horse popped through the door one time LOLOLOLOLOLOLOL"
     }
   ]
 }

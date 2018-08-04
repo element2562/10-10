@@ -12,13 +12,14 @@ const Api = Object.create({}, {
         }
     },
     addGameToLibrary: {
-        value: (userId, name, picture, summary, rating) => {
+        value: (id, userId, name, picture, summary, rating) => {
             return fetch("http://localhost:5002/games", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json; charset=utf-8"
                 },
                 body: JSON.stringify({
+                    id: id,
                     userId: userId,
                     name: name,
                     picture: picture,

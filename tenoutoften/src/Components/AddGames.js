@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormControl, Button } from "react-bootstrap";
+import { Form, FormControl} from "react-bootstrap";
 import Api from "./ApiManager";
 import Game from "./Game";
 export default class extends Component {
@@ -29,7 +29,7 @@ export default class extends Component {
     componentDidMount() {
         Api.getGames(sessionStorage.getItem("User"))
         .then(response => {
-            console.log(response);
+            // console.log(response);
             
             this.setState({
                 library: response
@@ -51,9 +51,8 @@ export default class extends Component {
                         })
                     }} />
             </Form>
-            <div>
+            <div className="mainSearchContainer">
                 {this.state.results.map((game, index) => (
-                    
                     <Game key={game.id} isInLibrary={this.state.isInLibrary} games={game} index={index} results={this.state.results} library={this.state.library} />
                 ))}
             </div>

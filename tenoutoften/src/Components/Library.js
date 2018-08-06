@@ -37,7 +37,7 @@ export default class extends Component {
         if(this.state.library.length > 0){
         return(
             <React.Fragment>
-            <PageHeader>{username}'s library</PageHeader>
+            <PageHeader id="libraryTitle">{username}'s library</PageHeader>
             {
                 this.state.library.map(games => (
                         <YourGames 
@@ -61,7 +61,10 @@ export default class extends Component {
         )
     } else {
         return(
+            <React.Fragment>
+            <PageHeader id="libraryTitle">{username}'s library</PageHeader>
             <h3>Click on the <strong>Add Games</strong> tab to populate your library!</h3>
+            </React.Fragment>
         )
     }
     }

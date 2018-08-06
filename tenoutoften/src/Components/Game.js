@@ -19,17 +19,17 @@ export default props => {
         }
         let found = false;
         props.library.forEach(item => {
-            if(item.id === props.games.id){
+            if(item.gameId === props.games.id){
                 found = true;
                 return found;
             }
             })
     return (
-            <div>
+            <div className="gameCards">
                 <ListGroup>
                 <ListGroupItem>
+                <h3 className="gameTitle">{props.games.name}</h3>
                 <Well>
-                <h3>{props.games.name}</h3>
                 <Image src={url} width="125" height="220" thumbnail />
                 <p><strong>Rating: </strong>{roundedRating}</p>
                 <p><strong>Summary: </strong>{props.games.summary}</p>

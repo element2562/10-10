@@ -1,13 +1,12 @@
 import React from "react";
-import { Image, Button, Modal, Form, ListGroup, ListGroupItem, FormGroup, InputGroup, FormControl, ControlLabel, Well } from "react-bootstrap";
+import { Image, Button, Modal, ListGroupItem, FormGroup, FormControl, ControlLabel, Well } from "react-bootstrap";
 import Api from "./ApiManager";
-export default props => {
-    let showRating = props.ratingShow;   
+export default props => {   
     return(
         <React.Fragment>
-        <ListGroupItem>
+        <ListGroupItem className="gameCards">
+        <h2 className="gameTitle">{props.games.name}</h2>
         <Well>
-        <h3>{props.games.name}</h3>
         <Image src={props.games.picture} width="125" height="220" thumbnail />
         <p><strong>Summary: </strong>{props.games.summary}</p>
         <p><strong>Rating: </strong>{props.games.rating}</p>

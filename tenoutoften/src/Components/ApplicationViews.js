@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Login from "./Login";
 import AddGames from "./AddGames";
 import Library from "./Library";

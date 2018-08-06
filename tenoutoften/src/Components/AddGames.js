@@ -4,12 +4,40 @@ import Api from "./ApiManager";
 import Game from "./Game";
 export default class extends Component {
     state = {
-        results: []
+        results: [],
+        library: []
     }
     searchForGames = (e) => {
         return Api.getFromExternalApi(e)
         .then(e => e.json())
     }
+    // checkForGame = () => {
+    //     this.state.library.map(item => {
+    //         this.state.results.map(key => {
+                
+    //             if(item.id === key.id){
+    //                 console.log("true", item.id, key.id)
+    //                 this.setState({isInLibrary: true})
+                    
+    //             } else {
+    //                 console.log("false", item.id, key.id)
+    //                 this.setState({isInLibrary: false})
+    //             }
+    //         })
+    //     })
+    // }
+    componentDidMount() {
+        Api.getGames(sessionStorage.getItem("User"))
+        .then(response => {
+            console.log(response);
+            
+            this.setState({
+                library: response
+            })
+        })
+    }
+    
+    
     render(){
         return(
             <React.Fragment>
@@ -26,7 +54,7 @@ export default class extends Component {
             <div>
                 {this.state.results.map((game, index) => (
                     
-                    <Game key={game.id} games={game} index={index} results={this.state.results} />
+                    <Game key={game.id} isInLibrary={this.state.isInLibrary} games={game} index={index} results={this.state.results} library={this.state.library} />
                 ))}
             </div>
             </React.Fragment>

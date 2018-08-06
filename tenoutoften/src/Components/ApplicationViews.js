@@ -13,7 +13,9 @@ isAuthenticated = () => sessionStorage.getItem("User") !== null;
         <React.Fragment>
                 <Route path="/" component={NavBar} />
                 <Route exact path="/" component={Library} />
-                <Route exact path="/addgames" component={AddGames} />
+                <Route exact path="/addgames" render={props => {
+                    return <AddGames {...props} />
+                }} />
         </React.Fragment>
         )
     } else {

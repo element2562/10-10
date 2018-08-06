@@ -48,16 +48,6 @@
       "comment": "Great game, but developers focus mainly on adding new content rather than fixing what they have."
     },
     {
-      "id": 19560,
-      "userId": "1",
-      "name": "God of War",
-      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/cintjlnx6o8qyqtcnajl.jpg",
-      "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
-      "rating": "97/100",
-      "yourRating": "99",
-      "comment": "Not quite the best game ever HOMESSSS"
-    },
-    {
       "id": 7352,
       "userId": "5",
       "name": "ABZÛ",
@@ -93,6 +83,22 @@
       "rating": "78/100",
       "yourRating": "90",
       "comment": "I really enjoy this game. It's very funny because of all the glitches you can do. A horse popped through the door one time LOLOLOLOLOLOLOL"
+    },
+    {
+      "id": 19560,
+      "userId": "1",
+      "name": "God of War",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/cintjlnx6o8qyqtcnajl.jpg",
+      "summary": "\"It is a new beginning for Kratos. Living as a man, outside the shadow of the gods, he seeks solitude in the unfamiliar lands of Norse mythology. With new purpose and his son at his side, Kratos must fight for survival as powerful forces threaten to disrupt the new life he has created...\"",
+      "rating": "98/100"
+    },
+    {
+      "id": 7331,
+      "userId": "1",
+      "name": "Uncharted 4: A Thief's End",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/zvkdiv2dze8tcit6bzza.jpg",
+      "summary": "Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he's willing to sacrifice to save the ones he loves.",
+      "rating": "93/100"
     }
   ]
 }

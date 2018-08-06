@@ -11,21 +11,21 @@ export default class extends Component {
         return Api.getFromExternalApi(e)
         .then(e => e.json())
     }
-    checkForGame = () => {
-        this.state.library.map(item => {
-            this.state.results.map(key => {
+    // checkForGame = () => {
+    //     this.state.library.map(item => {
+    //         this.state.results.map(key => {
                 
-                if(item.id === key.id){
-                    console.log("true", item.id, key.id)
-                    this.setState({isInLibrary: true})
+    //             if(item.id === key.id){
+    //                 console.log("true", item.id, key.id)
+    //                 this.setState({isInLibrary: true})
                     
-                } else {
-                    console.log("false", item.id, key.id)
-                    this.setState({isInLibrary: false})
-                }
-            })
-        })
-    }
+    //             } else {
+    //                 console.log("false", item.id, key.id)
+    //                 this.setState({isInLibrary: false})
+    //             }
+    //         })
+    //     })
+    // }
     componentDidMount() {
         Api.getGames(sessionStorage.getItem("User"))
         .then(response => {

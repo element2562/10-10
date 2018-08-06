@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Image, ListGroup, ListGroupItem} from "react-bootstrap"
+import {Button, Image, ListGroup, ListGroupItem, Well} from "react-bootstrap"
 import api from "./ApiManager"
 export default props => {
     let url = ""
@@ -28,6 +28,7 @@ export default props => {
             <div>
                 <ListGroup>
                 <ListGroupItem>
+                <Well>
                 <h3>{props.games.name}</h3>
                 <Image src={url} width="125" height="220" thumbnail />
                 <p><strong>Rating: </strong>{roundedRating}</p>
@@ -57,6 +58,7 @@ export default props => {
                         <Button disabled={true}>Added</Button>
                     )
                 }
+                </Well>
                 </ListGroupItem>
                 </ListGroup>
             </div>

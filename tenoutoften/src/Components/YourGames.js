@@ -1,11 +1,12 @@
 import React from "react";
-import { Image, Button, Modal, Form, FormGroup, InputGroup, FormControl, ControlLabel, Jumbotron } from "react-bootstrap";
+import { Image, Button, Modal, Form, ListGroup, ListGroupItem, FormGroup, InputGroup, FormControl, ControlLabel, Well } from "react-bootstrap";
 import Api from "./ApiManager";
 export default props => {
     let showRating = props.ratingShow;   
     return(
         <React.Fragment>
-        <Jumbotron>
+        <ListGroupItem>
+        <Well>
         <h3>{props.games.name}</h3>
         <Image src={props.games.picture} width="125" height="220" thumbnail />
         <p><strong>Summary: </strong>{props.games.summary}</p>
@@ -24,7 +25,8 @@ export default props => {
         <Button onClick={() => {
             props.handleRating();
         }}>Rate</Button>
-        </Jumbotron>
+        </Well>
+        </ListGroupItem>
         <Modal show={props.show}>
             <Modal.Header>
             <Modal.Title>Review</Modal.Title>

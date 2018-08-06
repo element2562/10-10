@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormGroup, InputGroup, FormControl, ControlLabel, Button, Modal, ModalDialog, ModalTitle, ModalHeader, ModalFooter, PageHeader } from "react-bootstrap";
+import { Form, Well, FormGroup, InputGroup, FormControl, ControlLabel, Button, Modal, PageHeader } from "react-bootstrap";
 import Api from "./ApiManager";
 export default class extends Component {
     state = {
@@ -23,7 +23,7 @@ export default class extends Component {
                 sessionStorage.setItem("Username", response[0].username);
                 window.location.reload();
             } else {
-                alert("Try again dipshit");
+                alert("The username or password you entered is incorrect.");
             }
         })
     }
@@ -68,6 +68,7 @@ export default class extends Component {
             </Modal>
             </div>
             <div>
+            <Well id="Login">
             <FormGroup>
             <Form>
                 <ControlLabel>Username</ControlLabel>
@@ -82,6 +83,7 @@ export default class extends Component {
                 <Button onClick={this.handleShow}>Register</Button>
             </Form>
             </FormGroup>
+            </Well>
             </div>
             </div>
         )

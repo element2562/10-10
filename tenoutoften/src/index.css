@@ -24,7 +24,7 @@ body {
   font-size: 2em;
   text-shadow: 2px 3px 5px gray;
 }
-#gameSearch {
+.gameSearch {
   margin: 0 auto;
   max-width: 85vw;
 }

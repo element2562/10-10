@@ -1,65 +1,55 @@
-import React from "react";
-import { Image, Button, Modal, ListGroupItem, FormGroup, FormControl, ControlLabel, Well } from "react-bootstrap";
+import React, { Component } from "react";
+import { Image, Button, ListGroupItem, FormGroup, FormControl, ControlLabel, Well } from "react-bootstrap";
 import Api from "./ApiManager";
-export default props => {   
+import Modal from "./Modal";
+export default class EachGame extends Component {   
+    state = {
+        show: false
+    }
+    handleRating = () => {
+        this.setState({show: true})
+    }
+    handleClose = () => {
+        this.setState({show: false})
+    }
+    render(){
     return(
         <React.Fragment>
+        <Modal 
+        getComment={this.props.getComment}
+        getRating={this.props.getRating} 
+        handleShow={this.props.handleShow}
+        populateState={this.props.populateState}
+        handleClose={this.handleClose}
+        games={this.props.games}
+        show={this.state.show}
+        showRating={this.props.showRating}
+        yourRating={this.props.yourRating}
+        comment={this.props.comment}
+        />
         <ListGroupItem className="gameCards">
-        <h2 className="gameTitle">{props.games.name}</h2>
+        <h2 className="gameTitle">{this.props.games.name}</h2>
         <Well>
-        <Image src={props.games.picture} width="125" height="220" thumbnail />
-        <p><strong>Summary: </strong>{props.games.summary}</p>
-        <p><strong>Rating: </strong>{props.games.rating}</p>
-        { (props.games.yourRating) ? (
+        <Image src={this.props.games.picture} width="125" height="220" thumbnail />
+        <p><strong>Summary: </strong>{this.props.games.summary}</p>
+        <p><strong>Rating: </strong>{this.props.games.rating}</p>
+        { (this.props.games.yourRating) ? (
         <div>
-        <p><strong>Your Rating: </strong>{props.games.yourRating}/100</p>
-        <p><strong> Your Comment: </strong>{props.games.comment}</p>
+        <p><strong>Your Rating: </strong>{this.props.games.yourRating}/100</p>
+        <p><strong> Your Comment: </strong>{this.props.games.comment}</p>
         </div>
         ) : <p>Click the rate button to review</p>
             }
-        <Button id={props.games.id} onClick={e => {
+        <Button id={this.props.games.id} onClick={e => {
             Api.deleteGame(e.target.id)
-            .then(() => props.populateState());
+            .then(() => this.props.populateState());
         }}>Delete</Button>
         <Button onClick={() => {
-            props.handleRating();
+            this.handleRating();
         }}>Rate</Button>
         </Well>
         </ListGroupItem>
-        <Modal show={props.show}>
-            <Modal.Header>
-            <Modal.Title>Review</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <p><em>Give your rating and a comment then click submit!</em></p>
-                <FormGroup>
-                <ControlLabel>Rating</ControlLabel><FormControl type="number" min="0" max="100" onChange={(e) => {
-                    props.getRating(e.target.value);
-                }}/>
-                <ControlLabel>Comment</ControlLabel><FormControl onChange={(e) => {
-                    props.getComment(e.target.value);
-                }}/>
-                </FormGroup>
-            </Modal.Body>
-        
-            <Modal.Footer>
-            <Button onClick={props.handleClose}>Close</Button>
-            <Button bsStyle="primary" id={props.games.id} onClick={(e) => {
-                if(props.yourRating > 100 || props.yourRating < 0 || props.yourRating === undefined){
-                    alert("Sorry, but your rating must be between 0 and 100.");
-                } else {
-                    console.log(props.yourRating);
-                    
-                    Api.addRating(e.target.id, props.yourRating, props.comment)
-                    .then(response => {
-                        props.populateState();
-                        props.showRating();
-                        props.handleClose();
-                    })
-                }
-            }}>Submit</Button>
-            </Modal.Footer>
-            </Modal>
         </React.Fragment>
     )
+}
 }

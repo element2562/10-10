@@ -19,7 +19,7 @@ export default props => {
         }
         let found = false;
         props.library.forEach(item => {
-            if(item.gameId === props.games.id){
+            if(item.gameNumber === props.games.id){
                 found = true;
                 return found;
             }

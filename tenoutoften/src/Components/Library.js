@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { PageHeader } from "react-bootstrap";
+import { PageHeader, FormControl, Label, DropdownButton, MenuItem, Form } from "react-bootstrap";
 import YourGames from "./YourGames";
 import Api from "./ApiManager";
-export default class extends Component {
+export default class Library extends Component {
     state = {
         library: [],
         show: false,
@@ -23,22 +23,47 @@ export default class extends Component {
     showRating = () => {
         this.setState({ratingShow: true});
     }
-    handleRating = () => {
-        this.setState({show: true})
-    }
-    handleClose = () => {
-        this.setState({show: false})
-    }
+    // handleSearch = (searchValue) => {
+    //     Api.searchThroughLibrary(sessionStorage.getItem("User"), searchValue)
+    //     .then(response => {
+    //         this.setState({
+    //             results: [response]
+    //         })
+    //         console.log(this.state.results);
+            
+    //     })
+    // }
     componentDidMount(){
         this.populateState()
     }
     render() {
         let username = sessionStorage.getItem("Username");
-        if(this.state.library.length > 0){
+        if(this.state.library.length > 0 && ! this.state.results){
         return(
             <React.Fragment>
             <PageHeader id="libraryTitle">{username}'s library</PageHeader>
+            <Form>
+            <FormControl placeholder="Search through your games!" autoFocus={true} className="gameSearch" onChange={(e) => this.setState({results: e.target.value})} />
+            </Form>
+            {/* <div>
+            <Label>Sort by:</Label>
+            <DropdownButton
+            title="Your Rating"
+            id="yourRating"
+            >
+            <MenuItem>Low to High</MenuItem>
+            <MenuItem>High to Low</MenuItem>
+            </DropdownButton>
+            <DropdownButton
+            title="External Rating"
+            id="extRating"
+            >
+            <MenuItem>Low to High</MenuItem>
+            <MenuItem>High to Low</MenuItem>
+            </DropdownButton>
+            </div> */}
             {
+                
                 this.state.library.map(games => (
                         <YourGames 
                         key={games.id} 
@@ -59,7 +84,36 @@ export default class extends Component {
         }
             </React.Fragment>
         )
-    } else {
+    } else if(this.state.results){
+        let searchResults = this.state.library.filter((game) => {return game.name.toLowerCase().match(this.state.results.toLowerCase())})
+        return(
+        <React.Fragment>
+        <PageHeader id="libraryTitle">{username}'s library</PageHeader>
+        <FormControl placeholder="Search through your games!" className="gameSearch" value={this.state.results} autoFocus={true} onChange={(e) => this.setState({results: e.target.value})} />
+        {/* <p>Sort by:</p> */}
+        {
+        searchResults.map(games => (
+        <YourGames 
+        key={games.id}
+        games={games} 
+        testId={games.id}
+        populateState={this.populateState}
+        handleRating={this.handleRating}
+        handleClose={this.handleClose}
+        getRating={this.getRating}
+        getComment={this.getComment}
+        show={this.state.show}
+        yourRating={this.state.yourRating}
+        comment={this.state.comment}
+        showRating={this.showRating}
+        seeRating={this.state.showRating}
+        />
+    ))
+    }
+    </React.Fragment>
+    )
+    } 
+    else {
         return(
             <React.Fragment>
             <PageHeader id="libraryTitle">{username}'s library</PageHeader>

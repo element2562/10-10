@@ -5,7 +5,7 @@ const Api = Object.create({}, {
         {
             headers: {
                 "Accept": "application/json",
-                "user-key": "f792b01bdf9418339f6fe379cef472dc"
+                "user-key": "2750d5751b2f06d5df178cc7bd62c077"
             }
         }
         )
@@ -19,7 +19,7 @@ const Api = Object.create({}, {
                     "Content-Type": "application/json; charset=utf-8"
                 },
                 body: JSON.stringify({
-                    gameId: gameId,
+                    gameNumber: gameId,
                     userId: userId,
                     name: name,
                     picture: picture,
@@ -59,6 +59,8 @@ const Api = Object.create({}, {
     },
     deleteGame: {
         value: (id) => {
+            console.log(id);
+            
             return fetch(`http://localhost:5002/games/${id}`, {
                 method: "DELETE"
             })
@@ -80,5 +82,11 @@ const Api = Object.create({}, {
             // .then(e => e.json())
         }
     }
+    // searchThroughLibrary: {
+    //     value: (id, search) => {
+    //         return fetch(`http://localhost:5002/games/${id}/q=${search}`)
+    //         .then(e => e.json())
+    //     }
+    // }
 })
 export default Api;

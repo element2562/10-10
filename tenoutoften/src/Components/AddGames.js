@@ -42,13 +42,15 @@ export default class extends Component {
         return(
             <React.Fragment>
             <Form>
-                    <FormControl id="gameSearch" placeholder="Search for a game!" onChange={e => {
+                    <FormControl className="gameSearch" placeholder="Search for a game!" onKeyDown={e => {
+                        if(e.keyCode === 9){
                         this.searchForGames(e.target.value)
                         .then(response => {
                             this.setState({
                                 results: response
                             })
                         })
+                    }
                     }} />
             </Form>
             <div className="mainSearchContainer">
